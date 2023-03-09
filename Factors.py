@@ -4,8 +4,8 @@ class Factors:
 
     def factors(self, num1):
         try:
-            for i in range(num1):
-                for j in range(num1):
+            for i in range(num1 + 1):
+                for j in range(num1 + 1):
                     if i * j == num1:
                         print(f"{i} & {j} are a factor of {num1}")
                     else:

@@ -1,12 +1,12 @@
 class Factors:
-    def init(self):
-        pass
+    nums = []
 
     def factors(self, num1):
         try:
             for i in range(num1 + 1):
                 for j in range(num1 + 1):
-                    if i * j == num1:
+                    if i * j == num1 and not ((i,j) in self.nums or (j,i) in self.nums):
+                        self.nums.append((i,j))
                         print(f"{i} & {j} are a factor of {num1}")
                     else:
                         continue
